@@ -189,8 +189,4 @@ add_filter( 'enter_title_here', 'wpb_change_title_text' );
         return $speaker;
     }
         // Init Freemius.
-<<<<<<< HEAD
     speaker();
-=======
-    speaker();
->>>>>>> origin/master

@@ -268,7 +268,7 @@ p {
 }
 .tlp-team .layout2 .short-bio p{
   padding: 5px 0px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
  /* font-size: 1.9rem;*/
   line-height: 1.6842
 }
@@ -282,7 +282,7 @@ border-radius: 0px!important;
 width: 100px;
 float: right;
 }
-.layout-stuct2 .imagebordertwo .img-lay2,.layout-stuct3 .img-lay2{
+.layout-stuct2 .imagebordertwo .img-lay2{
   border-radius: 50%;
 }
 /************************ End Layout 2 ********************/
@@ -299,6 +299,9 @@ float: right;
 .tlp-team .layout3 .short-bio{ padding: 0px 0px 0px; }
 .tlp-team .layout3 .round-img img{-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;}
 .layout3 .tlp-equal-height{height: auto!important;}
+p.full-bio{
+  margin-bottom: 0px;
+}
 /************************ End Layout 3 ********************/
 
 /******************** isotope ***********************/

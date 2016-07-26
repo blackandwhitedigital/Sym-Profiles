@@ -218,24 +218,27 @@ h3.ui-sortable-handle span{
 #wpbody-content .wrap{margin-top: 30px;}
 
 #adminmenu li.menu-top:hover .wp-menu-image img, #adminmenu li.wp-has-current-submenu .wp-menu-image img, #adminmenu .wp-menu-image img{
-    width: 20px!important;
+    width: 20px !important;
     padding-top: 0px;
     margin-top: 15px;
 }
 .asmin-color-three input{
-    margin-right: 9px !important;
+    margin-right: 30px !important;
 }
 .tlp-field {
-    float: right;
+    float: right; 
     width: 65%;
 }
 .settingCss span{
-    margin-right: 30px;
+    margin-right: 37px;
     margin-bottom: 6px;
     display: inline-block;
 }
+.wp-color-result{
+    margin-right: 30px;
+}
 .asmin-color-three select{
-  margin-right: 10px;
+  margin-right: 40px;
   padding-right: 9px;
 }
 .tlp-help p {

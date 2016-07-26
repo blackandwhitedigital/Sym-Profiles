@@ -55,7 +55,7 @@ if(!class_exists('SpeakershortCode')):
 									<button data-sort-by="original-order" class="selected">Default</button>
 									<button data-sort-by="name">Name</button>
 									<button data-sort-by="designation">Job Title</button>
-									<button data-sort-by="organization">Organization</button>
+									<button data-sort-by="organisation">Organisation</button>
 								  </div>';
 					   $html .= '<div class="tlp-team-isotope">';
 					   $html .= "<div class='isotop-stuct'>";
@@ -156,15 +156,12 @@ if(!class_exists('SpeakershortCode')):
 					$html .= '<div class="body"><div class= "block"><h3 class="name text-color heading-color"><a title="' . $title . '"  class="modal-popup" href="'. $pLink.'">' . $title . '</a></h3></div>';
 					}
 					if($designation){
-						$html .= '<div class="designation setting-org">'.$designation.'</div>';
+						$html .= '<div class="designation setting-desg">'.$designation.'</div>';
 					}
 					if($organisation){
 						$html .= '<div class="organisation setting-org">'.$organisation.'</div>';
 					}
-					if($speaker_event){
-						$html .= '<div class="designation setting-org"><a href="' . $speakerevent_link . '" class ="text-color">'.$speaker_event.'</a></div>';
-					}
-				
+	
 	                $html .= '</div></div>';
 	                $html .= '<div class="short-bio text-color">';
 	    				if($short_bio){
@@ -203,7 +200,7 @@ if(!class_exists('SpeakershortCode')):
 					}else{
                         $html .= '<h3 class="tlp-title heading-color"><a title="'.$title.'" href="'.$pLink.'">'.$title.'</a></h3>';
 					}
-					$html .='<div class="designation setting-org">'.$designation.'</div>';
+					$html .='<div class="designation setting-desg">'.$designation.'</div>';
 					$html .='<div class="organisation setting-org">'.$organisation.'</div>';
 						if($speaker_event){
 							$html .= '<div class="designation text-color"><a href="' . $speakerevent_link . '" class ="text-color">'.$speaker_event.'</a></div>';
@@ -220,9 +217,9 @@ if(!class_exists('SpeakershortCode')):
 						   	$html .= '<p class="setting_desc" id="shortdesc'.$ID.'">' . $shortexcerpt . '</p>';
 						   	
 						   	}
-						   	$html .= '<p class="setting_desc desc" id="fulldesc'.$ID.'"><a class="readmore_text" onclick="fadeouttext('.$ID.')">' . $short_bio . '</a></br>';
+						   	$html .= '<p class="setting_desc desc" id="fulldesc'.$ID.'"><a class="readmore_text" onclick="fadeouttext('.$ID.')">' . $short_bio . '</a></br></p>';
 						if (apply_filters('the_content',get_the_content())){
-						   	$html .= '<p class="full-bio"><a href="'. $pLink.'" class="full_biolink">Click for full biography</a></p></p>';
+						   	$html .= '<p class="full-bio"><a href="'. $pLink.'" class="full_biolink">Click for full biography</a></p>';
 						}
 						
 					$html .= '</div>';
@@ -248,7 +245,7 @@ if(!class_exists('SpeakershortCode')):
 					}else{
                         $html .= '<h3 class="tlp-title heading-color"><a title="'.$title.'" href="'.$pLink.'">'.$title.'</a></h3>';
 					}
-					$html .='<div class="designation setting-org">'.$designation.'</div>';
+					$html .='<div class="designation setting-desg">'.$designation.'</div>';
 					$html .='<div class="organisation setting-org">'.$organisation.'</div>';
 						if($speaker_event){
 							$html .= '<div class="designation text-color"><a href="' . $speakerevent_link . '" class ="text-color">'.$speaker_event.'</a></div>';
@@ -265,9 +262,9 @@ if(!class_exists('SpeakershortCode')):
 						   	$html .= '<p class="setting_desc" id="shortdesc'.$ID.'">' . $shortexcerpt . '</p>';
 						   	
 						   	}
-						   	$html .= '<p class="setting_desc desc" id="fulldesc'.$ID.'"><a class="readmore_text" onclick="fadeouttext('.$ID.')">' . $short_bio . '</a>';
+						   	$html .= '<p class="setting_desc desc" id="fulldesc'.$ID.'"><a class="readmore_text" onclick="fadeouttext('.$ID.')">' . $short_bio . '</a></p>';
 						if (apply_filters('the_content',get_the_content())){
-						   	$html .= '<p class="full-bio"><a href="'. $pLink.'" class="full_biolink">Click for full biography</a></p></p>';
+						   	$html .= '<p class="full-bio"><a href="'. $pLink.'" class="full_biolink">Click for full biography</a></p>';
 						}
 					$html .= '</div>';
 
@@ -291,7 +288,7 @@ if(!class_exists('SpeakershortCode')):
 							$html .= '<h3 class="name heading-color"><a title="' . $title . '" href="' . $pLink . '">' . $title . '</a></h3>';
 						}
 						if($designation){
-							$html .= '<div class="designation setting-org">'.$designation.'</div>';
+							$html .= '<div class="designation setting-desg">'.$designation.'</div>';
 						}
 
 						if($organisation){

@@ -20,7 +20,9 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $fb = (isset($settings['full_biolink']) ? ($settings['full_biolink'] ? $settings['full_biolink'] : '#333333' ) : '#333333');
             $fw = (isset($settings['textstylehead']) ? ($settings['textstylehead'] ? $settings['textstylehead'] : 'normal' ) : 'normal');
             $fs = (isset($settings['textstyleorg']) ? ($settings['textstyleorg'] ? $settings['textstyleorg'] : 'normal' ) : 'normal');
+            $fd = (isset($settings['textstyledesg']) ? ($settings['textstyledesg'] ? $settings['textstyledesg'] : 'normal' ) : 'normal');
             $textd = (isset($settings['textstyledesc']) ? ($settings['textstyledesc'] ? $settings['textstyledesc'] : 'normal' ) : 'normal');
+            
 
              /* title setting layout1*/
             $hc = (isset($settings['heading_color']) ? ($settings['heading_color'] ? $settings['heading_color'] : '#fff' ) : '#fff');
@@ -30,12 +32,20 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             if ($hd =='hide'){
                 $hdis = 'none';
             }
+            /* designation setting layout1*/
+            $dc = (isset($settings['desg_color']) ? ($settings['desg_color'] ? $settings['desg_color'] : '#333' ) : '#333');
+            $ds = (isset($settings['desg_size']) ? ($settings['desg_size'] ? $settings['desg_size'] : '15px' ) : '15px');
+            $da = (isset($settings['desg_align']) ? ($settings['desg_align'] ? $settings['desg_align'] : 'none' ) : 'none');
+            $ddd = (isset($settings['desg_display']) ? ($settings['desg_display'] ? $settings['desg_display'] : 'show' ) : 'show');
+            if ($ddd =='hide'){
+                $ddis = 'none';
+            }
             /* organisation setting layout1*/
             $oc = (isset($settings['org_color']) ? ($settings['org_color'] ? $settings['org_color'] : '#333' ) : '#333');
             $os = (isset($settings['org_size']) ? ($settings['org_size'] ? $settings['org_size'] : '15px' ) : '15px');
             $oa = (isset($settings['org_align']) ? ($settings['org_align'] ? $settings['org_align'] : 'none' ) : 'none');
             $od = (isset($settings['org_display']) ? ($settings['org_display'] ? $settings['org_display'] : 'show' ) : 'show');
-            if ($od =='hide' && $od =='Hide'){
+            if ($od =='hide'){
                 $odis = 'none';
             }
              /* description setting layout1*/
@@ -43,7 +53,7 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $ts = (isset($settings['text_size']) ? ($settings['text_size'] ? $settings['text_size'] : '15px' ) : '15px');
             $ta = (isset($settings['text_align']) ? ($settings['text_align'] ? $settings['text_align'] : 'none' ) : 'none');
             $td = (isset($settings['text_display']) ? ($settings['text_display'] ? $settings['text_display'] : 'show' ) : 'show');
-            if ($td =='hide' && $td =='Hide'){
+            if ($td =='hide'){
                 $tdis = 'none';
             }
             $gm = (isset($settings['grid']) ? ($settings['grid'] ? $settings['grid'] : '15px' ) : '15px');
@@ -71,12 +81,23 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $html .= 'text-decoration: '.$fw.'!important';
             $html .= '}';
             /* title setting layout1 */
+            /* designation setting layout1*/
+            $html .='.setting-desg{';
+            $html .= 'color: '.$dc.'!important;';
+            $html .= 'font-size: '.$ds.'!important;';
+            $html .= 'text-align: '.$da.'!important;';
+            $html .= 'display: '.$ddis.'!important;';
+            $html .= 'font-weight: '.$fd.'!important;';
+            $html .= 'font-style: '.$fd.'!important;';
+            $html .= 'text-decoration: '.$fd.'!important';
+            $html .= '}';
+            /* designation setting layout1 */
             /* organisation setting layout1*/
             $html .='.setting-org{';
             $html .= 'color: '.$oc.'!important;';
             $html .= 'font-size: '.$os.'!important;';
             $html .= 'text-align: '.$oa.'!important;';
-            $html .= 'display: '.$odis.'!important';
+            $html .= 'display: '.$odis.'!important;';
             $html .= 'font-weight: '.$fs.'!important;';
             $html .= 'font-style: '.$fs.'!important;';
             $html .= 'text-decoration: '.$fs.'!important';
@@ -87,7 +108,7 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $html .= 'color: '.$tc.'!important;';
             $html .= 'font-size: '.$ts.'!important;';
             $html .= 'text-align: '.$ta.'!important;';
-            $html .= 'display: '.$tdis.'!important';
+            $html .= 'display: '.$tdis.'!important;';
             $html .= 'font-weight: '.$textd.'!important;';
             $html .= 'font-style: '.$textd.'!important;';
             $html .= 'text-decoration: '.$textd.'!important';
@@ -132,7 +153,7 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             wp_enqueue_style( 'tlpstyle', $Speaker->assetsUrl . 'css/speakerstyle.css' );
             wp_enqueue_script( 'tpl-team-isotope-js', $Speaker->assetsUrl . 'js/isotope.pkgd.js', array('jquery'), '2.2.2', true);
             wp_enqueue_script( 'tpl-team-isotope-imageload-js', $Speaker->assetsUrl . 'js/imagesloaded.pkgd.min.js', array('jquery'), null, true);
-            wp_enqueue_script( 'tpl-team-front-end', $Speaker->assetsUrl . 'js/front-end.js', null, null, true);
+            wp_enqueue_script( 'speaker-front-end', $Speaker->assetsUrl . 'js/front-end.js',  array('jquery'), '2.2.2', true);
         }
 
 	}

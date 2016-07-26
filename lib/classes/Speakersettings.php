@@ -58,6 +58,7 @@ class Speakersettings
         add_image_size( $Speaker->options['feature_img_size'], $width, $height, true );
        
     }
+    
 
 
     /**

@@ -4,6 +4,7 @@
 	        getSortData: {
 	            name: '.name',
 	            designation: '.designation',
+                organisation: '.organisation',
 	        },
 	        sortAscending : true,
 	        itemSelector: '.team-member',
@@ -15,6 +16,7 @@
         $isotop.isotope({ sortBy: sortByValue });
         $(this).parent().find('.selected').removeClass('selected');
         $(this).addClass('selected');
+        //alert('hey');
     });
 
     $(window).resize(  HeightResize );

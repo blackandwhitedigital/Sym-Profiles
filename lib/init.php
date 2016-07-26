@@ -163,30 +163,30 @@ function wpb_change_title_text( $title ){
 
 add_filter( 'enter_title_here', 'wpb_change_title_text' );
 // Create a helper function for easy SDK access.
-    function speaker() {
-        global $speaker;
+function speaker() {
+    global $speaker;
 
-        if ( ! isset( $speaker ) ) {
-            // Include Freemius SDK.
-            require_once dirname(__FILE__) . '/freemius/start.php';
+    if ( ! isset( $speaker ) ) {
+        // Include Freemius SDK.
+        require_once dirname(__FILE__) . '/freemius/start.php';
 
-            $speaker = fs_dynamic_init( array(
-                'id'                => '350',
-                'slug'              => 'speaker',
-                'public_key'        => 'pk_3ef192c1f218e7be8a2df555680f4',
-                'is_live'           => false,
-                'is_premium'        => false,
-                'has_addons'        => false,
-                'has_paid_plans'    => false,
-                'menu'              => array(
-                    'slug'       => 'speaker',
-                    'first-path' => 'edit.php?post_type=speaker&page=getting_started',
-                    'support'    => false,
-                ),
-            ) );
-        }
-
-        return $speaker;
+        $speaker = fs_dynamic_init( array(
+            'id'                => '345',
+            'slug'              => 'speaker',
+            'public_key'        => 'pk_59c69aaede426964c10880897f941',
+            'is_premium'        => false,
+            'has_addons'        => false,
+            'has_paid_plans'    => false,
+            'menu'              => array(
+                'slug'       => 'speaker',
+                'first-path' => 'wp-admin/edit.php?post_type=speaker&page=getting_started',
+                'support'    => false,
+            ),
+        ) );
     }
-        // Init Freemius.
-    speaker();
+
+    return $speaker;
+}
+
+// Init Freemius.
+speaker();

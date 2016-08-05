@@ -165,7 +165,7 @@ if(!class_exists('SpeakershortCode')):
 	                $html .= '</div></div>';
 	                $html .= '<div class="short-bio text-color">';
 	    				if($short_bio){
-						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<button  class="readmore_text text-color" onclick="fadeintext('.$ID.')">&nbsp...read more</button>' );
+						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<a  class="readmore_text text-color" onclick="fadeintext('.$ID.')">&nbsp...read more</a>' );
 						   	$html .= '<p class="setting_desc" id="shortdesc'.$ID.'">' . $shortexcerpt . '</p>';
 						   	
 						   	}
@@ -213,7 +213,7 @@ if(!class_exists('SpeakershortCode')):
 					$html .='<div class="short-bio text-color">';
 						if($short_bio){
 						   
-						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<button  class="readmore_text readtext" onclick="fadeintext('.$ID.')">&nbsp...read more</button>' );
+						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<a  class="readmore_text readtext" onclick="fadeintext('.$ID.')">&nbsp...read more</a>' );
 						   	$html .= '<p class="setting_desc" id="shortdesc'.$ID.'">' . $shortexcerpt . '</p>';
 						   	
 						   	}
@@ -258,7 +258,7 @@ if(!class_exists('SpeakershortCode')):
 					$html .='<div class="short-bio text-color">';
 						if($short_bio){
 						   
-						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<button  class="readmore_text readtext" onclick="fadeintext('.$ID.')">&nbsp...read more</button>' );
+						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<a  class="readmore_text readtext" onclick="fadeintext('.$ID.')">&nbsp...read more</a>' );
 						   	$html .= '<p class="setting_desc" id="shortdesc'.$ID.'">' . $shortexcerpt . '</p>';
 						   	
 						   	}

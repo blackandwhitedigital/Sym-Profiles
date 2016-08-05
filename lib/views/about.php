@@ -21,7 +21,7 @@ $settings = get_option($Speaker->options['settings']);
                 </form>
 
 
-                <?php wp_nonce_field($Speaker->nonceText(), 'agenda_nonce'); ?>
+                <?php wp_nonce_field($Speaker->nonceText(), 'speaker_nonce'); ?>
 
             <!-- Donation Button -->
 

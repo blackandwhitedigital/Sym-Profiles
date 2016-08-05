@@ -29,19 +29,19 @@
                         </td>
                     </tr>
 
-                    <!-- <tr>
+                    <tr>
                         <th scope="row"><label for="imgWidth"><?php _e('Image Size',SPEAKER_SLUG);?></label></th>
                         <td>
                             <input name="feature_imgw" type="text" value="<?php echo (isset($settings['feature_imgw']) ? ($settings['feature_imgw'] ? intval($settings['feature_imgw']) : 'auto' ) : 'auto'); ?>" size="4" class=""> * 
                             <input name="feature_imgh" type="text" value="<?php echo (isset($settings['feature_imgh']) ? ($settings['feature_imgh']? intval($settings['feature_imgh']) : 'auto' ) : 'auto'); ?>" size="4" class=""> <?php _e('(Width * Height)',SPEAKER_SLUG); ?>
                         </td>
                         
-                    </tr> -->
+                    </tr>
 
-                    <tr>
+                    <!-- <tr>
                        <th scope="row"><label for="imgWidth"><?php _e('Image Size',SPEAKER_SLUG);?></label></th>
                        <td><input name="feature_img[width]" type="text" value="<?php echo (isset($settings['feature_img']['width']) ? ($settings['feature_img']['width'] ? intval($settings['feature_img']['width']) : 400 ) : 400); ?>" size="4" class=""> * <input name="feature_img[height]" type="text" value="<?php echo (isset($settings['feature_img']['height']) ? ($settings['feature_img']['height'] ? intval($settings['feature_img']['height']) : 400 ) : 400); ?>" size="4" class=""> <?php _e('(Width * Height)',SPEAKER_SLUG); ?></td>
-                   </tr>
+                   </tr> -->
 
                     <tr>
                         <th scope="row"><label for="imgborder"><?php _e('Image Border',SPEAKER_SLUG);?></label></th>

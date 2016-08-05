@@ -68,7 +68,7 @@ class Speakersettings
         global $Speaker;
         $page = add_submenu_page( 'edit.php?post_type=speaker', __('Speaker Settings', SPEAKER_SLUG), __('Settings', SPEAKER_SLUG), 'administrator', 'Speaker_settings', array($this, 'Speaker_settings') );
 
-        $about_us = add_submenu_page('edit.php?post_type=speaker', __('Getting Started', SPEAKER_SLUG), __('Getting Started', SPEAKER_SLUG), 'administrator', 'getting_started', array($this, 'getting_started'));
+        $about_us = add_submenu_page('edit.php?post_type=speaker', __('Getting Started', SPEAKER_SLUG), __('Getting Started', SPEAKER_SLUG), 'administrator', 'gettingstarted', array($this, 'gettingstarted'));
 
         add_action('admin_print_styles-' . $page, array( $this,'speaker_style'));
         add_action('admin_print_scripts-'. $page, array( $this,'speaker_script'));
@@ -104,7 +104,7 @@ class Speakersettings
      /**
      * Render donation page
      */
-    function getting_started()
+    function gettingstarted()
     {
         global $Speaker;
         $Speaker->render('about');

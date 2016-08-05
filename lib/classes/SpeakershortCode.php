@@ -40,6 +40,12 @@ if(!class_exists('SpeakershortCode')):
 			$args = array(
 					'post_type' => 'speaker',
 					'post_status'=> 'publish',
+					/*'orderby' => 'meta_value',
+					'meta_query' => array(
+						array(
+							'key' => $atts['orderby'],
+						)
+						),*/
 					'posts_per_page' => $atts['speaker'],
 					'orderby' => $atts['orderby'],
 					'order'   => $atts['order']
@@ -87,9 +93,21 @@ if(!class_exists('SpeakershortCode')):
                             if($atts['col']==2){
 						          $image_area="tlp-col-lg-5 tlp-col-md-5 tlp-col-sm-6 tlp-col-xs-12 ";
 						          $content_area="tlp-col-lg-7 tlp-col-md-7 tlp-col-sm-6 tlp-col-xs-12 ";
-						      }else{
-						          $image_area="tlp-col-lg-3 tlp-col-md-3 tlp-col-sm-6 tlp-col-xs-12 ";
+						          $logoarea="";
+						      }elseif($atts['col']==3){
+						          $image_area="tlp-col-lg-3 tlp-col-md-4 tlp-col-sm-6 tlp-col-xs-12 ";
 						          $content_area="tlp-col-lg-9 tlp-col-md-9 tlp-col-sm-6 tlp-col-xs-12 ";
+						          $logoarea="tlp-col-lg-12 tlp-col-md-12 tlp-col-sm-12 tlp-col-xs-12";
+						      }
+							elseif($atts['col']==4){
+						          $image_area
+						          ="tlp-col-lg-12 tlp-col-md-12 tlp-col-sm-12 tlp-col-xs-12 ";
+						          $content_area="tlp-col-lg-12 tlp-col-md-12 tlp-col-sm-12 tlp-col-xs-12 ";
+						          $logoarea="";
+						      }else{
+						          $image_area="tlp-col-lg-3 tlp-col-md-4 tlp-col-sm-6 tlp-col-xs-12 ";
+						          $content_area="tlp-col-lg-9 tlp-col-md-9 tlp-col-sm-6 tlp-col-xs-12 ";
+						          $logoarea="";
 						      }
 
 				      		$sLink = unserialize(get_post_meta( get_the_ID(), 'social' , true));
@@ -103,11 +121,11 @@ if(!class_exists('SpeakershortCode')):
 									break;
 
 									case 2:
-										$html .= $this->layoutTwo($ID,$title, $pLink, $imgSrc, $designation, $organisation,$logo,$short_bio, $sLink,$image_area,$content_area);
+										$html .= $this->layoutTwo($ID,$title, $pLink, $imgSrc, $designation, $organisation,$logo,$short_bio, $sLink,$image_area,$content_area,$logoarea);
 									break;
 
 									case 3:
-										$html .= $this->layoutThree($ID,$title, $pLink, $imgSrc, $designation,$organisation, $logo,$short_bio, $sLink,$image_area,$content_area);
+										$html .= $this->layoutThree($ID,$title, $pLink, $imgSrc, $designation,$organisation, $logo,$short_bio, $sLink,$image_area,$content_area,$logoarea);
 									break;
 
 									case 'isotope':
@@ -184,7 +202,7 @@ if(!class_exists('SpeakershortCode')):
         	$html .= '</div>';
 			return $html;
 		}
-		function layoutTwo($ID,$title, $pLink, $imgSrc, $designation,$organisation,$logo, $short_bio, $sLink, $image_area,$content_area){
+		function layoutTwo($ID,$title, $pLink, $imgSrc, $designation,$organisation,$logo, $short_bio, $sLink, $image_area,$content_area,$logoarea){
 			global $Speaker;
 			$settings = get_option($Speaker->options['settings']);
 			$html = null;
@@ -205,7 +223,7 @@ if(!class_exists('SpeakershortCode')):
 						if($speaker_event){
 							$html .= '<div class="designation text-color"><a href="' . $speakerevent_link . '" class ="text-color">'.$speaker_event.'</a></div>';
 						}
-					$html .='</span><span class="rightcontenttwo '. $image_area.'">';
+					$html .='</span><span class="rightcontenttwo '. $logoarea.'">';
 					if($logo){
 		                $html .= '<img src= '.$logo.' />';
 		            }
@@ -229,7 +247,7 @@ if(!class_exists('SpeakershortCode')):
 
 			return $html;
 		}
-		function layoutThree($ID,$title, $pLink, $imgSrc, $designation,  $organisation,$logo,$short_bio,  $sLink,$image_area,$content_area){
+		function layoutThree($ID,$title, $pLink, $imgSrc, $designation,  $organisation,$logo,$short_bio,  $sLink,$image_area,$content_area,$logoarea){
 			global $Speaker;
 			$settings = get_option($Speaker->options['settings']);
 			$html = null;
@@ -250,7 +268,7 @@ if(!class_exists('SpeakershortCode')):
 						if($speaker_event){
 							$html .= '<div class="designation text-color"><a href="' . $speakerevent_link . '" class ="text-color">'.$speaker_event.'</a></div>';
 						}
-					$html .='</span><span class="rightcontenttwo '. $image_area.' " >';
+					$html .='</span><span class="rightcontenttwo '. $logoarea.' " >';
 					if($logo){
 		                $html .= '<img src= '.$logo.' />';
 		            }

@@ -65,9 +65,10 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
              $html .= '.readmore_text.text-color,.tlp-team .layout-stuct1 .single-team-area .designation, .tlp-team .layout-stuct1 .single-team-area .organisation{';
              $html .= 'color: '.$pc;
             $html .= '}';
-            $html .='.img-responsive {';
+            $html .='.tlp-team .img-responsive,.img-responsive {';
             $html .= 'width: '.$fiw.'px!important;';
-            $html .= 'height: '.$fih.'px!important';
+            $html .= 'height: '.$fih.'px!important;';
+            $html .=  'margin: 0 auto';
             $html .= '}';
 
               /* title setting layout1*/

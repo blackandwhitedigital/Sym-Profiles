@@ -736,3 +736,13 @@ a.control_next {
 .full_biolink:hover{
   opacity: 0.9;
 }
+
+
+.layout2 .rightcontenttwo, .layout3 .rightcontenttwo{
+  position: unset;
+  width: 60px;
+  margin: 5px 0px 5px 0px;
+  padding: 0!important;
+  float: left;
+}
+.layout2 .short-bio, .layout3 .short-bio{float: left;}

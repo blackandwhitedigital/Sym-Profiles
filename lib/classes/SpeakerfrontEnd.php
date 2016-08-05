@@ -120,7 +120,8 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $html .='.img-responsive {';
             $html .= 'border-radius: '.$br.'!important;';
             $html .= 'width: '.$fiw.'px!important;';
-            $html .= 'height: '.$fih.'px!important';
+            $html .= 'height: '.$fih.'px!important;';
+            $html .=  'margin: 0 auto';
             $html .= '}';
             $html .='.img-lay2 {';
             $html .= 'width: '.$fiw.'px!important;';

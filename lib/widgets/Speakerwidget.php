@@ -73,12 +73,12 @@ if(!class_exists('Speakerwidget')):
 
 
                                     if($designation){
-                                        $html .="</span><span>,&nbsp$designation</span>";
+                                        $html .="</span><span>&nbsp$designation</span>";
                                     }
                                 //$html .= "";
                                 //$html .= '<div class="organisation">';
                                     if($organisation){
-                                        $html .="<span>,&nbsp$organisation</span>";
+                                        $html .="<span>&nbsp$organisation</span>";
                                     }
                                 $html .= "</a></h3>";
                                 $html .= '<div class="short-bio">';
@@ -136,7 +136,7 @@ if(!class_exists('Speakerwidget')):
             <p><label for="<?php echo $this->get_field_id( 'speaker' ); ?>"><?php _e('Number of speaker to show:', SPEAKER_SLUG); ?></label>
                 <input type="text" size="2" id="<?php echo $this->get_field_id('speaker'); ?>" name="<?php echo $this->get_field_name('speaker'); ?>" value="<?php echo $instance['speaker']; ?>" /></p>
 
-
+         
             <?php
         }
         public function update( $new_instance, $old_instance ) {

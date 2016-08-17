@@ -179,7 +179,7 @@ function speaker() {
             'has_paid_plans'    => false,
             'menu'              => array(
                 'slug'       => 'speaker',
-                'first-path' => 'wp-admin/edit.php?post_type=speaker&page=getting_started',
+                'first-path' => 'edit.php?post_type=speaker&page=gettingstarted',
                 'support'    => false,
             ),
         ) );

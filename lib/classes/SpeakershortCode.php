@@ -183,7 +183,7 @@ if(!class_exists('SpeakershortCode')):
 	                $html .= '</div></div>';
 	                $html .= '<div class="short-bio text-color">';
 	    				if($short_bio){
-						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<a  class="readmore_text text-color" onclick="fadeintext('.$ID.')">&nbsp...read more</a>' );
+						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<a  class="readmore_text text-color" onclick="fadeintext('.$ID.')" style="font-style: italic !important;">&nbsp...&nbspread more</a>' );
 						   	$html .= '<p class="setting_desc" id="shortdesc'.$ID.'">' . $shortexcerpt . '</p>';
 						   	
 						   	}
@@ -217,7 +217,7 @@ if(!class_exists('SpeakershortCode')):
 						$html .= '<h3 class="tlp-title heading-color">'.$title.'</h3>';
 					}else{
                         $html .= '<h3 class="tlp-title heading-color"><a title="'.$title.'" href="'.$pLink.'">'.$title.'</a></h3>';
-					}
+					} 
 					$html .='<div class="designation setting-desg">'.$designation.'</div>';
 					$html .='<div class="organisation setting-org">'.$organisation.'</div>';
 						if($speaker_event){
@@ -231,7 +231,7 @@ if(!class_exists('SpeakershortCode')):
 					$html .='<div class="short-bio text-color">';
 						if($short_bio){
 						   
-						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<a  class="readmore_text readtext" onclick="fadeintext('.$ID.')">&nbsp...read more</a>' );
+						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<a  class="readmore_text readtext" onclick="fadeintext('.$ID.')" style="font-style: italic !important;">&nbsp...&nbspread more</a>' );
 						   	$html .= '<p class="setting_desc" id="shortdesc'.$ID.'">' . $shortexcerpt . '</p>';
 						   	
 						   	}
@@ -276,7 +276,7 @@ if(!class_exists('SpeakershortCode')):
 					$html .='<div class="short-bio text-color">';
 						if($short_bio){
 						   
-						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<a  class="readmore_text readtext" onclick="fadeintext('.$ID.')">&nbsp...read more</a>' );
+						   	$shortexcerpt = wp_trim_words( $short_bio, $num_words = 20, $more = '<a  class="readmore_text readtext" onclick="fadeintext('.$ID.')" style="font-style: italic !important;">&nbsp...&nbspread more</a>' );
 						   	$html .= '<p class="setting_desc" id="shortdesc'.$ID.'">' . $shortexcerpt . '</p>';
 						   	
 						   	}
@@ -291,13 +291,13 @@ if(!class_exists('SpeakershortCode')):
 			return $html;
 		}
 
-		function layoutIsotope($title, $pLink, $imgSrc, $designation,$organisation,$grid){
+		function layoutIsotope($title, $pLink, $imgSrc, $designation,$organisation,$grid){ 
 			global $Speaker;
 			$settings = get_option($Speaker->options['settings']);
 			$html = null;
 			
 			$html .= "<div class='team-member tlp-col-lg-{$grid} tlp-col-md-{$grid} tlp-col-sm-6 tlp-col-xs-12 tlp-equal-height '>";
-				$html .= '<div class="single-team-area">';
+				$html .= '<div class="single-team-area">'; 
 			  		$html .='<div class="imageborder"><img class="img-responsive" src="'.$imgSrc.'" alt="'.$title.'"/></div>';
 			  		$html .= '<div class="tlp-content">';
 						if($settings['link_detail_page'] == 'no') {

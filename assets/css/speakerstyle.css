@@ -721,9 +721,8 @@ a.control_next {
 .readmore_text{display: }
 
 .readmore_text.text-color{
- font-size: 12px !important;
- text-transform: capitalize;
-}
+ font-size: 15px !important;
+ }
 .layout1 a.full_biolink,.layout2 a.full_biolink,.layout3 a.full_biolink,.tlp-team-isotope a.full_biolink{
   color: red;
    display: block;
@@ -746,3 +745,12 @@ a.control_next {
   float: left;
 }
 .layout2 .short-bio, .layout3 .short-bio{float: left;}
+
+/*************** sidebar widget spacing ****************/
+
+.widget_Speaker .container-fluid.tlp-team, 
+.widget_Speaker .single-team-area{padding: 0px;}
+.widget_Speaker .profile-pic{padding: 0px!important}
+.widget_Speaker .single-team-area .tlp-col-lg-7{padding-left: 9px!important; padding-right: 0px!important;}
+.widget_Speaker .logo{padding: 0px!important;}
+.widget_Speaker .service-list-wrapper .bio {font-size: 14px !important;}

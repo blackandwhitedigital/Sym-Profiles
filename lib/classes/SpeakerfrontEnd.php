@@ -72,7 +72,7 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $html .= '}';
 
               /* title setting layout1*/
-            $html .='.heading-color,.tlp-team .layout1 .single-team-area h3 a{';
+            $html .='.heading-color,.tlp-team .layout1 .single-team-area h3 a, .heading-color a, .tlp-team .tlp-team-isotope .single-team-area h3 a{';
             $html .= 'color: '.$hc.'!important;';
             $html .= 'font-size: '.$hs.'!important;';
             $html .= 'text-align: '.$ha.'!important;';
@@ -134,6 +134,7 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $html .='.imagebordertwo {';
             //$html .= 'border: '.$ib.'!important;';
             $html .= 'border-radius: 50%!important;';
+            $html .= 'border: 1px solid #c8c1c1;';
             $html .= '}';
             
             

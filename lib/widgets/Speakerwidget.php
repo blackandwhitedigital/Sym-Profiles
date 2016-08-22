@@ -143,7 +143,7 @@ if(!class_exists('Speakerwidget')):
 
             $instance = array();
             $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-            $instance['speaker'] = ( ! empty( $new_instance['speaker'] ) ) ? (int)( $new_instance['member'] ) : '';
+            $instance['speaker'] = ( ! empty( $new_instance['speaker'] ) ) ? (int)( $new_instance['speaker'] ) : '';
             $instance['layout'] = ( ! empty( $new_instance['layout'] ) ) ? (int)( $new_instance['layout'] ) : '';
 
             return $instance;

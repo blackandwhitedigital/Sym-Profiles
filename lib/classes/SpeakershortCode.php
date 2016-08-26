@@ -36,7 +36,8 @@ if(!class_exists('SpeakershortCode')):
 			}
 
 			$html = null;
-
+			if ($atts['orderby']= 'speaker'){
+				$atts['orderby'] = 'title';
 			$args = array(
 					'post_type' => 'speaker',
 					'post_status'=> 'publish',
@@ -50,8 +51,16 @@ if(!class_exists('SpeakershortCode')):
 					'orderby' => $atts['orderby'],
 					'order'   => $atts['order']
 				);
-
-
+			}else{
+				$args = array(
+						'post_type' => 'speaker',
+						'post_status'=> 'publish',
+						'posts_per_page' => $atts['speaker'],
+						'orderby' => $atts['orderby'],
+						'order'   => $atts['order']
+						);
+			} 
+	        
 			$speakerQuery = new WP_Query( $args );
 
 			   if ( $speakerQuery->have_posts() ) {
@@ -60,7 +69,7 @@ if(!class_exists('SpeakershortCode')):
 					   $html .= '<div class="button-group sort-by-button-group">
 									<button data-sort-by="original-order" class="selected">Default</button>
 									<button data-sort-by="name">Name</button>
-									<button data-sort-by="designation">Job Title</button>
+									<button data-sort-by="role">Job Title</button>
 									<button data-sort-by="organisation">Organisation</button>
 								  </div>';
 					   $html .= '<div class="tlp-team-isotope">';

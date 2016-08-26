@@ -3,7 +3,7 @@
 	  $isotop.isotope({
 	        getSortData: {
 	            name: '.name',
-	            designation: '.designation',
+	            role: '.designation',
                 organisation: '.organisation',
 	        },
 	        sortAscending : true,

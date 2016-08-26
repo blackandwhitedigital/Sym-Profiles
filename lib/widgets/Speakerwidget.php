@@ -69,21 +69,21 @@ if(!class_exists('Speakerwidget')):
                                 $html .= '<div class="single-team-area">';
                                 $html .="<div class='tlp-col-lg-3 tlp-col-md-3 tlp-col-sm-3 tlp-col-xs-12 profile-pic'><img src='$img' /></div>
                                         <div class='tlp-col-lg-7 tlp-col-md-7 tlp-col-sm-7 tlp-col-xs-12'>
-                                        <h3 class='widget-heading'><a href='".get_the_permalink()."'><span>".get_the_title();
+                                        <h3 class='widget-heading'><a href='".get_the_permalink()."'><span class='heading-color'>".get_the_title();
 
 
                                     if($designation){
-                                        $html .="</span><span>&nbsp$designation</span>";
+                                        $html .=",</span><span class='setting-desg'>$designation";
                                     }
                                 //$html .= "";
                                 //$html .= '<div class="organisation">';
                                     if($organisation){
-                                        $html .="<span>&nbsp$organisation</span>";
+                                        $html .=",</span><span class='setting-org'>$organisation</span>";
                                     }
                                 $html .= "</a></h3>";
                                 $html .= '<div class="short-bio">';
                                     if($bio){
-                                        $html .="<div class='bio'>$bio</div>";
+                                        $html .="<div class='bio setting_desc'>$bio</div>";
                                     }
                                 $html .= "</div></div>";
 

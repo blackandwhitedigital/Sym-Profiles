@@ -363,6 +363,7 @@ p.full-bio{
 .profile-pic img{
     border: 1px solid #eee;
     margin:0 auto;
+    float: right;
 }
 .profile-cover{
   text-align: center;
@@ -754,3 +755,18 @@ a.control_next {
 .widget_Speaker .single-team-area .tlp-col-lg-7{padding-left: 9px!important; padding-right: 0px!important;}
 .widget_Speaker .logo{padding: 0px!important;}
 .widget_Speaker .service-list-wrapper .bio {font-size: 14px !important;}
+
+
+
+#widget_speaker-2 .profile-pic img{
+  margin-right: 10px; min-width: 200px; min-height: 200px;
+}
+
+@media(max-width: 1291px){
+  #widget_speaker-2 .profile-pic img{ min-width: auto; min-height: auto; width: 150px;}
+}
+@media(max-width: 767px){
+  #widget_speaker-2 .profile-pic img{width: 100%;}
+  .rightcontenttwo img{float: none;}
+  .layout2 .rightcontenttwo, .layout3 .rightcontenttwo{float: none; margin:5px auto;}
+}

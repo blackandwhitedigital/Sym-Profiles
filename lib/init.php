@@ -40,6 +40,9 @@ class Speaker
 
         register_activation_hook(SPEAKER_PLUGIN_ACTIVE_FILE_NAME, array($this, 'activate'));
         register_deactivation_hook(SPEAKER_PLUGIN_ACTIVE_FILE_NAME, array($this, 'deactivate'));
+        register_uninstall_hook(SPEAKER_PLUGIN_ACTIVE_FILE_NAME, array($this,'uninstall'));
+        //var_dump(SPEAKER_PLUGIN_ACTIVE_FILE_NAME);
+        
 
 	}
     
@@ -48,8 +51,22 @@ class Speaker
         flush_rewrite_rules();
         $this->insertDefaultData();
     }
+    
+    public function uninstall(){
+
+            global $wpdb;
+            $postmeta = $wpdb->prefix."postmeta";
+            $posts = $wpdb->prefix."posts";
+            $speakerid=$wpdb->get_col("SELECT ID from $posts where post_type = 'speaker'");
+            foreach ($speakerid as $key => $value) {
+                $wpdb->query("DELETE FROM $postmeta WHERE post_id = ".$value);
+            }
+            $wpdb->query("DELETE FROM $posts WHERE post_type = 'speaker' ");        
+    }
 
     public function deactivate() {
+        echo "mangesh";
+        exit();
         flush_rewrite_rules();
     }
 

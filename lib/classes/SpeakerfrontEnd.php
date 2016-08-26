@@ -18,6 +18,7 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $ib = (isset($settings['imgborder']) ? ($settings['imgborder'] ? $settings['imgborder'] : 'none' ) : 'none');
             $pc = (isset($settings['primary_color']) ? ($settings['primary_color'] ? $settings['primary_color'] : '#0367bf' ) : '#0367bf');
             $fb = (isset($settings['full_biolink']) ? ($settings['full_biolink'] ? $settings['full_biolink'] : '#333333' ) : '#333333');
+            $btc = (isset($settings['full_biolinktext']) ? ($settings['full_biolinktext'] ? $settings['full_biolinktext'] : '#F00' ) : '#F00');
             $fw = (isset($settings['textstylehead']) ? ($settings['textstylehead'] ? $settings['textstylehead'] : 'normal' ) : 'normal');
             $fs = (isset($settings['textstyleorg']) ? ($settings['textstyleorg'] ? $settings['textstyleorg'] : 'normal' ) : 'normal');
             $fd = (isset($settings['textstyledesg']) ? ($settings['textstyledesg'] ? $settings['textstyledesg'] : 'normal' ) : 'normal');
@@ -118,6 +119,9 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $html .= '.full_biolink{';
             $html .= 'background-color:'.$fb.'';
             $html .= '}';
+            $html .= '.layout1 a.full_biolink, .layout2 a.full_biolink, .layout3 a.full_biolink, .tlp-team-isotope a.full_biolink{';
+            $html .= 'color:'.$btc.'';
+            $html .= '}';
             $html .='.img-responsive {';
             $html .= 'border-radius: '.$br.'!important;';
             $html .= 'width: '.$fiw.'px!important;';
@@ -128,16 +132,10 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $html .= 'width: '.$fiw.'px!important;';
             $html .= 'height: '.$fih.'px!important';
             $html .= '}';
-            $html .='.img-lay2, .imageborder{';
+            $html .='.img-lay2, .isotop-stuct .img-responsive,.layout1 .img-responsive{';
             $html .= 'border: '.$ib.'!important;';
             $html .= '}';
-            $html .='.imagebordertwo {';
-            //$html .= 'border: '.$ib.'!important;';
-            $html .= 'border-radius: 50%!important;';
-            $html .= 'border: 1px solid #c8c1c1;';
-            $html .= '}';
-            
-            
+                     
             $html .='.tlp-col-xs-1, .tlp-col-sm-1, .tlp-col-md-1, .tlp-col-lg-1, .tlp-col-xs-2, .tlp-col-sm-2, .tlp-col-md-2, .tlp-col-lg-2, .tlp-col-xs-3, .tlp-col-sm-3, .tlp-col-md-3, .tlp-col-lg-3, .tlp-col-xs-4, .tlp-col-sm-4, .tlp-col-md-4, .tlp-col-lg-4, .tlp-col-xs-5, .tlp-col-sm-5, .tlp-col-md-5, .tlp-col-lg-5, .tlp-col-xs-6, .tlp-col-sm-6, .tlp-col-md-6, .tlp-col-lg-6, .tlp-col-xs-7, .tlp-col-sm-7, .tlp-col-md-7, .tlp-col-lg-7, .tlp-col-xs-8, .tlp-col-sm-8, .tlp-col-md-8, .tlp-col-lg-8, .tlp-col-xs-9, .tlp-col-sm-9, .tlp-col-md-9, .tlp-col-lg-9, .tlp-col-xs-10, .tlp-col-sm-10, .tlp-col-md-10, .tlp-col-lg-10, .tlp-col-xs-11, .tlp-col-sm-11, .tlp-col-md-11, .tlp-col-lg-11, .tlp-col-xs-12, .tlp-col-sm-12, .tlp-col-md-12, .tlp-col-lg-12 {';
             $html .= 'padding-left: '.$gm.'!important;';
             $html .= 'padding-right: '.$gm.'!important';

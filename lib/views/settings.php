@@ -57,7 +57,7 @@
                     </tr>
 
                     <tr>
-                        <th scope="row"><label for="full_biolink"><?php _e('Full Bio Button',SPEAKER_SLUG);?></label></th>
+                        <th scope="row"><label for="full_biolink"><?php _e('Full Bio Button/Text',SPEAKER_SLUG);?></label></th>
                         <td>
                             <input name="full_biolink" type="text" value="<?php echo (isset($settings['full_biolink']) ? ($settings['full_biolink'] ? intval($settings['full_biolink']) : '#333333' ) : '#333333'); ?>"  class="tlp-color">
                             <input name="full_biolinktext" type="text" value="<?php echo (isset($settings['full_biolinktext']) ? ($settings['full_biolinktext'] ? intval($settings['full_biolinktext']) : '#F00' ) : '#F00'); ?>"  class="tlp-color">  

@@ -148,6 +148,10 @@ if (!class_exists('SpeakerPostMeta')):
 
             if ( 'speaker' != $post->post_type ) return;
 
+            update_post_meta($post_id,'post_id', sanitize_text_field(get_the_ID()));
+            update_post_meta($post_id,'speaker name', sanitize_text_field(get_the_title()));
+            update_post_meta($post_id,'publish-date', sanitize_text_field(get_the_date()));
+
             if ( isset( $_REQUEST['short_bio'] ) ) {
                 update_post_meta( $post_id, 'short_bio', sanitize_text_field( $_REQUEST['short_bio'] ) );
             }

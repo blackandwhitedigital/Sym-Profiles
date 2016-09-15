@@ -65,8 +65,6 @@ class Speaker
     }
 
     public function deactivate() {
-        echo "mangesh";
-        exit();
         flush_rewrite_rules();
     }
 

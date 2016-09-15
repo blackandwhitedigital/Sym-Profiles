@@ -67,20 +67,20 @@ $settings = get_option($Speaker->options['settings']);
         <p>To display your speakers you will need to add a ‘shortcode’ to the page or post in the location where you want the speakers to show.  This short code will look something like this:        </p>
         <p><code>[speaker]</code> </p>
         <p>This will give you a basic display of all the speakers you have created.  However, you can refine the shortcode using some additional options to control the final display.  This is what your shortcode may look like once you have added these settings:        </p>
-        <p><code>[speaker col=”2” speaker=”4” orderby=”speaker” order=”ASC” layout=”1”]</code>
+        <p><code>[speaker col=”2” speaker=”4” orderby=”speaker name” order=”ASC” layout=”1”]</code>
         </p>
         <p>The shortcode contains a number of optional elements that allow you to control the appearance of the speakers section.  These options are:</p>
         <ul>
         <li><strong>col</strong> = The number of columns you want to create (eg. 1, 2, 3, 4)</li>
         <li><strong>speaker</strong> = The quantity of speaker profiles you want to display (eg. 1, 5, 13 etc)</li>
-        <li><strong>orderby</strong> = Orderby (speaker, date, menu_order)</li>
+        <li><strong>orderby</strong> = Orderby (speaker name, publish-date, menu_order)</li>
         <li><strong>ordr</strong> = ASC, DESC </li>
-        <li><strong>layout</strong> = the layout template you want to use.  By default you can choose from  “1”, “2”, “3” and “isotope”
+        <li><strong>layout</strong> = the layout template you want to use.  By default you can choose from  “1”, “2”, “3” and “sortable”
 <ul>
           <li>1 is a portrait type display with pictures at the top</li>
             <li>2 is a landscape display with picture in a circle</li>
             <li>3 is a landscape display with square picture</li>
-            <li>isotope displays pictures only with mouse over text appearing. The order can be sorted by options selected at the top of the page.  </li>
+            <li>sortable displays pictures only with mouse over text appearing. The order can be sorted by options selected at the top of the page.  </li>
           </ul>
         </li>
         </ul>

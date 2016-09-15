@@ -73,12 +73,12 @@ if(!class_exists('Speakerwidget')):
 
 
                                     if($designation){
-                                        $html .=",</span><span class='setting-desg'>$designation";
+                                        $html .="</span><span class='setting-desg'>$designation";
                                     }
                                 //$html .= "";
                                 //$html .= '<div class="organisation">';
                                     if($organisation){
-                                        $html .=",</span><span class='setting-org'>$organisation</span>";
+                                        $html .="</span><span class='setting-org'>$organisation</span>";
                                     }
                                 $html .= "</a></h3>";
                                 $html .= '<div class="short-bio">';

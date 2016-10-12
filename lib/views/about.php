@@ -87,7 +87,7 @@ $settings = get_option($Speaker->options['settings']);
         <p>Options 2 and 3 also allow you to display logos, in addtition to the speaker's picture.</p>
         <p><a href="http://www.blackandwhitedigital.eu/symposium-speaker-profiles-free-template-samples/" target="_blank">You can see examples of each layout here.</a></p>
       <p>&nbsp;</p>
-        <h3>3. Settings Options - changing colours, fonts, etc. in your live template</h3>
+        <h3>3. Settings Options - changing colors, fonts, etc. in your live template</h3>
         <p>Once you have selected a template design you like and include this in the short code (above) you can tweak almost every aspect of this to fit your event's branding and color scheme.</p>
       <p>On the ‘Settings’ tab in the left hand menu you can change the appearance of many elements of the speaker profiles.</p>  
         <ul>

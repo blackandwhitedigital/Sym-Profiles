@@ -197,4 +197,4 @@ if (!class_exists('SpeakerPostMeta')):
     }
     
 endif;
-    
+?>

@@ -205,3 +205,4 @@ function speaker() {
 
 // Init Freemius.
 speaker();
+?>

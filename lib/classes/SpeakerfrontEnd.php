@@ -24,6 +24,7 @@ if( !class_exists( 'SpeakerfrontEnd' ) ) :
             $fd = (isset($settings['textstyledesg']) ? ($settings['textstyledesg'] ? $settings['textstyledesg'] : 'normal' ) : 'normal');
             $textd = (isset($settings['textstyledesc']) ? ($settings['textstyledesc'] ? $settings['textstyledesc'] : 'normal' ) : 'normal');
             
+            $br = (isset($settings['border_radius']) ? ($settings['border_radius'] ? $settings['border_radius'] : 'normal' ) : 'normal');
 
              /* title setting layout1*/
             $hc = (isset($settings['heading_color']) ? ($settings['heading_color'] ? $settings['heading_color'] : '#fff' ) : '#fff');
